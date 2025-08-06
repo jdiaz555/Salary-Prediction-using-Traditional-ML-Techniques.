@@ -104,7 +104,7 @@ streamlit run app.py
 ## Credits
 
 Developed by **Syed Zubair Hussain Shah**
-[🌐 Portfolio](https://zubair-hussain-shah.vercel.app/) • [🔗 LinkedIn](https://linkedin.com/in/syed-zubair-hussain-shah)
+[🌐 Portfolio](https://zubair-hussain-shah.vercel.app/) • [🔗 LinkedIn](https://www.linkedin.com/in/syed-zubair-hussain-shah-491294376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 
 ```
