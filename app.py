@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 # Load both models
-lr_model = joblib.load("linear_regression_model.pkl")
-rf_model = joblib.load("random_forest_model.pkl")
+lr_model = joblib.load("linear_regression_model (1).pkl")
+rf_model = joblib.load("random_forest_model (1).pkl")
 
 # Custom CSS for styling
 st.markdown("""
