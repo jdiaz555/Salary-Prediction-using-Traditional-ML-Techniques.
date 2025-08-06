@@ -1,4 +1,4 @@
-```
+
 # Salary Prediction using Traditional ML Techniques
 
 This project demonstrates how to predict employee salaries using machine learning regression techniques. By analyzing years of experience, the model can accurately forecast potential salary, making it a powerful tool for HR, recruiters, and career planning platforms.
