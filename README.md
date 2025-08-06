@@ -1,20 +1,20 @@
 
-# Salary Prediction using Traditional ML Techniques
+#  Salary Prediction using Traditional ML Techniques
 
-This project demonstrates how to predict employee salaries using machine learning regression techniques. By analyzing years of experience, the model can accurately forecast potential salary, making it a powerful tool for HR, recruiters, and career planning platforms.
+This project demonstrates how to predict employee salaries using machine learning regression techniques. By analyzing years of experience, the model can forecast potential salary. It includes an interactive web app built with Streamlit and allows switching between two trained ML models.
 
 ---
 
 ##  Project Overview
 
-This is a complete end-to-end machine learning workflow built using:
+An end-to-end machine learning solution built using:
 
 - **Pandas & Numpy** for data handling  
 - **Matplotlib & Seaborn** for visualization  
-- **Scikit-learn** for modeling  
-- **Streamlit** for deployment  
+- **Scikit-learn** for training models  
+- **Streamlit** for deployment with an interactive UI  
 
-Users can enter their years of experience and instantly get a predicted salary value through an interactive web app.
+Users can input their years of experience and choose between **Linear Regression** and **Random Forest** models to get a predicted salary.
 
 ---
 
@@ -29,59 +29,59 @@ Users can enter their years of experience and instantly get a predicted salary v
 
 ##  Features & Workflow
 
--  Cleaned and explored dataset  
--  Trained a **Linear Regression** model  
--  Evaluated with MAE, RMSE, and R² Score  
--  Built a responsive **Streamlit web app**  
--  Deployed the model and web app using **Render**  
--  All code and assets organized for GitHub and Colab  
+-  Dataset cleaning and visualization  
+-  Trained two regression models  
+- Linear Regression  
+- Random Forest Regressor  
+- Evaluation using MAE, RMSE, R² Score  
+- Streamlit app with model selection  
+- Deployed via Streamlit Cloud
 
 ---
 
 ##  Model Evaluation
 
-| Metric      | Score     |
-|-------------|-----------|
-| MAE         | 6,286.45  |
-| RMSE        | 7,059.04  |
-| R² Score    | 0.90      |
+| Model              | MAE     | RMSE    | R² Score |
+|--------------------|---------|---------|----------|
+| Linear Regression  | 6,286.45| 7,059.04| **0.90** |
+| Random Forest      | 6,872.01| 7,982.55| 0.88     |
 
-A strong R² score of 0.90 means the model explains 90% of the variance in salary using only one feature — **Years of Experience**.
+🔎 **Linear Regression** performed better and is used as the default model in `salary_predictor.pkl`.
 
 ---
 
 ##  Streamlit Web App
 
-> 🔗 **Live Demo:** [https://your-render-link.com](https://your-render-link.com)  
-
+>  **Live Demo:** [https://your-streamlit-app-url.streamlit.app](https://your-streamlit-app-url.streamlit.app)
 
 ###  App Features:
-- Clean modern UI with Streamlit  
-- Sidebar with project description  
-- Real-time prediction and feedback  
-- Progress bar + animation effects  
-- Mobile responsive
+- Clean modern UI with sidebar
+- Model selector: Linear Regression or Random Forest
+- Real-time salary prediction
+- Visual feedback: progress bar + balloons
 
 ---
 
-## Repository Structure
+##  Repository Structure
 
 ```
 
 salary-prediction-ml/
-├── app.py                   # Streamlit app code
-├── salary\_predictor.pkl     # Trained model
-├── requirements.txt         # Python dependencies
-├── README.md                # Project overview
+├── app.py                         # Streamlit app
+├── salary\_predictor.pkl           # Default model (Linear Regression)
+├── linear\_regression\_model.pkl    # Saved LR model
+├── random\_forest\_model.pkl        # Saved RF model
+├── requirements.txt               # Project dependencies
+├── README.md                      # Project overview
 └── .gitignore
 
 ````
 
 ---
 
-## How to Run Locally
+##  How to Run Locally
 
-```bash
+```
 # Clone the repo
 git clone https://github.com/your-username/salary-prediction-ml.git
 cd salary-prediction-ml
@@ -95,22 +95,16 @@ streamlit run app.py
 
 ---
 
-## Google Colab Notebook
+##  Google Colab Notebook
 
-Click below to explore the full model training and evaluation notebook:
-
- [Open in Google Colab](https://colab.research.google.com/drive/1ObI1yeyQ3ar5oUDO7hXj0g6UewGWzTr8?usp=sharing)
+👉 [Open in Google Colab](https://colab.research.google.com/drive/1ObI1yeyQ3ar5oUDO7hXj0g6UewGWzTr8?usp=sharing)
 
 ---
 
-##  Credits
+## Credits
 
 Developed by **Syed Zubair Hussain Shah**
-[Portfolio](https://zubair-hussain-shah.vercel.app/) • [LinkedIn](https://linkedin.com/in/syed-zubair-hussain-shah)
-
----
+[🌐 Portfolio](https://zubair-hussain-shah.vercel.app/) • [🔗 LinkedIn](https://linkedin.com/in/syed-zubair-hussain-shah)
 
 
-
-
-
+```
