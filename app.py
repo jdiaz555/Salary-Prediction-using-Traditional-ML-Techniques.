@@ -42,7 +42,7 @@ with st.sidebar:
     st.write("This is a machine learning-powered app that predicts the estimated salary based on years of experience.")
     st.write("The model is trained using linear regression for high accuracy.")
     st.markdown("---")
-    st.write(" Developed by [Your Name]")
+   
 
 # User Input
 st.subheader(" Enter your information:")
