@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load("salary_predictor.pkl")
+model = joblib.load("salary_predictor.ipynb")
 
 # Custom CSS Styling
 st.markdown("""
