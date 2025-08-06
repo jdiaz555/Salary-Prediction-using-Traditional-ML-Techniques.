@@ -1,7 +1,3 @@
----
-
-##  Final `README.md` for GitHub
-
 ```
 # Salary Prediction using Traditional ML Techniques
 
