@@ -110,8 +110,7 @@ Developed by **Syed Zubair Hussain Shah**
 
 ---
 
-```
 
 
-Let me know if you want help **deploying to Render** or writing your first GitHub commit message.
-```
+
+
