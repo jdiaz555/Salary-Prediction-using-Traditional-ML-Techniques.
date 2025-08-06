@@ -52,7 +52,7 @@ Users can input their years of experience and choose between **Linear Regression
 
 ##  Streamlit Web App
 
->  **Live Demo:** [[https://your-streamlit-app-url.streamlit.app](https://your-streamlit-app-url.streamlit.app)](https://salary-prediction-using-traditional-ml-techniques-d5mdi8bw6iu5.streamlit.app/)
+>  **Live Demo:** https://salary-prediction-using-traditional-ml-techniques-d5mdi8bw6iu5.streamlit.app/
 
 ###  App Features:
 - Clean modern UI with sidebar
