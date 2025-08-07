@@ -17,7 +17,7 @@ st.set_page_config(
 # Load models
 @st.cache_resource
 def load_models():
-    rf = pickle.load(open("random_forest_model (3).pkl", "rb"))
+    rf = pickle.load(open("random_forest_model (2).pkl", "rb"))
     lr = pickle.load(open("linear_regression_model (2).pkl", "rb"))
     return {"Random Forest": rf, "Linear Regression": lr}
 
