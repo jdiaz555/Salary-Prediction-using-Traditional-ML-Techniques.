@@ -7,23 +7,22 @@ import os
 import datetime
 import time
 
-# ------------------- Page Config -------------------
 st.set_page_config(
     page_title="Salary Predictor",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# ------------------- Load Models -------------------
+# Load models with original file names
 @st.cache_resource
 def load_models():
-    rf = pickle.load(open("random_forest_model.pkl", "rb"))
-    lr = pickle.load(open("linear_regression_model.pkl", "rb"))
-    return {"Random Forest": rf, "Linear Regression": lr}
+    rf = pickle.load(open("random_forest_model (2).pkl", "rb"))
+    lr = pickle.load(open("linear_regression_model (2).pkl", "rb"))
+    default = pickle.load(open("salary_predictor (3).pkl", "rb"))
+    return {"Random Forest": rf, "Linear Regression": lr, "Default": default}
 
 models = load_models()
 
-# ------------------- Sidebar Inputs -------------------
 with st.sidebar:
     st.title("User Input")
     education_options = [
@@ -41,19 +40,17 @@ with st.sidebar:
     experience = st.slider("Years of Experience", 0.0, 40.0, 2.0, 0.5)
     selected_model = st.selectbox("Choose Model", list(models.keys()))
 
-# ------------------- Main Title -------------------
 st.markdown("<h1 style='text-align: center;'>Salary Prediction App</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Enter your details to predict your expected salary.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# ------------------- Encodings -------------------
+# Encoding
 edu_mapping = {val: idx for idx, val in enumerate(education_options)}
 job_mapping = {val: idx for idx, val in enumerate(job_title_options)}
 edu_encoded = edu_mapping.get(education, 0)
 job_encoded = job_mapping.get(job_title, 0)
 input_data = np.array([[experience, edu_encoded, job_encoded]])
 
-# ------------------- Predict Button -------------------
 if st.button("Predict Salary"):
     with st.spinner("Generating prediction..."):
         time.sleep(1)
@@ -65,7 +62,6 @@ if st.button("Predict Salary"):
     col1.metric(label="Predicted Salary", value=f"${predicted_salary:,.2f}")
     col2.metric(label="Experience", value=f"{experience} years")
 
-    # ------------------- Save Logs -------------------
     log_entry = {
         'timestamp': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         'education': education,
@@ -81,10 +77,8 @@ if st.button("Predict Salary"):
         df = pd.concat([df, pd.DataFrame([log_entry])], ignore_index=True)
     else:
         df = pd.DataFrame([log_entry])
-
     df.to_csv(log_file, index=False)
 
-    # ------------------- Plotly Chart -------------------
     st.markdown("### Predicted Salary Trend")
     x_vals = np.linspace(0, 40, 100)
     y_vals = [model.predict([[x, edu_encoded, job_encoded]])[0] for x in x_vals]
@@ -100,7 +94,7 @@ if st.button("Predict Salary"):
     )
     st.plotly_chart(fig, use_container_width=True)
 
-# ------------------- View Logs -------------------
+# Logs
 with st.expander(" View Prediction Logs"):
     if os.path.exists("prediction_log.csv"):
         log_data = pd.read_csv("prediction_log.csv")
@@ -109,7 +103,7 @@ with st.expander(" View Prediction Logs"):
     else:
         st.info("No predictions yet.")
 
-# ------------------- Model Metrics -------------------
+# Model Evaluation
 with st.expander(" Model Performance"):
     st.markdown("""
     | Model              | MAE     | RMSE    | R² Score |
@@ -118,9 +112,12 @@ with st.expander(" Model Performance"):
     | Random Forest      | 6,872.01| 7,982.55| 0.88     |
     """)
 
-# ------------------- About -------------------
+# About
 with st.expander("ℹ About This App"):
     st.markdown("""
-    This application predicts salaries based on a user's years of experience, education level, and job title using machine learning models (Random Forest & Linear Regression).  
-    Developed by **Syed Zubair Hussain Shah**.
+    This app predicts salary using ML models based on:
+    - Experience
+    - Job Title
+    - Education Level  
+    Deployed on Streamlit • Developed by Syed Zubair Hussain Shah.
     """)
