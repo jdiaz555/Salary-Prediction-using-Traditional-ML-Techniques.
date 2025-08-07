@@ -4,10 +4,11 @@ This project demonstrates how to predict employee salaries using machine learnin
 
 ---
 
-## 📸 App Interface Preview
-
+##  App Interface Preview
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Zubair-hussain/Salary-Prediction-using-Traditional-ML-Techniques./main/assets/ui-preview.png" alt="App UI" width="800"/>
+  <a href="https://salary-prediction-using-traditional-ml-techniques-d5mdi8bw6iu5.streamlit.app/" target="_blank">
+    <img src="https://raw.githubusercontent.com/Zubair-hussain/Salary-Prediction-using-Traditional-ML-Techniques./main/assets/ui-preview.png" alt="Click to Open App" width="800"/>
+  </a>
 </p>
 
 ---
