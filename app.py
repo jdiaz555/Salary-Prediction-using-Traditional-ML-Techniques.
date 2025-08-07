@@ -16,9 +16,9 @@ st.set_page_config(
 # Load models with original file names
 @st.cache_resource
 def load_models():
-    rf = pickle.load(open("random_forest_model (2).pkl", "rb"))
-    lr = pickle.load(open("linear_regression_model (2).pkl", "rb"))
-    default = pickle.load(open("salary_predictor (3).pkl", "rb"))
+    rf = pickle.load(open("random_forest_model.pkl", "rb"))
+    lr = pickle.load(open("linear_regression_model.pkl", "rb"))
+    default = pickle.load(open("salary_predictor.pkl", "rb"))
     return {"Random Forest": rf, "Linear Regression": lr, "Default": default}
 
 models = load_models()
