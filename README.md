@@ -3,12 +3,14 @@
 This project demonstrates how to predict employee salaries using machine learning regression techniques. By analyzing years of experience, the model can forecast potential salary. It includes an interactive web app built with Streamlit and allows switching between two trained ML models.
 
 ---
-##App Preview 
+## 📸 App Interface Preview
+
 <p align="center">
   <a href="https://salary-prediction-using-traditional-ml-techniques-d5mdi8bw6iu5.streamlit.app/" target="_blank">
-    <img src="https://github.com/user-attachments/assets/69210fb1-d02e-408f-8387-4a33839f0e18" alt="Click to Open App" width="800"/>
+    <img src="https://raw.githubusercontent.com/Zubair-hussain/Salary-Prediction-using-Traditional-ML-Techniques./main/assets/app_ui.png" alt="Click to Open App" width="800"/>
   </a>
 </p>
+
 
 ##  Project Overview
 
